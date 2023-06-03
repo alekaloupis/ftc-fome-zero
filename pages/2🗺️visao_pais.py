@@ -232,7 +232,6 @@ def Country_Mean_Votes(df1):
     ascending = False).reset_index()[['country_code','votes']]   
     
 #Arredondamos para nenhuma casa decimal os resultaados    
-    df_aux['votes'] = list(map(lambda x: round(x,0), df_aux['votes']))    
    
     df_aux = df_aux.rename(columns = {'votes': 'média das quantidades de avaliações'})
       
