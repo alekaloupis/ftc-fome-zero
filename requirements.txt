@@ -4,5 +4,5 @@ folium == 0.13.0
 streamlit-folium == 0.7.0
 inflection == 0.4.0
 plotly.express == 0.4.1
-folium.plugins == 0.14.0
-plotly.graph_objects == 5.14.1
+folium.plugins == 0.13.0
+plotly.graph_objects == 0.4.1
