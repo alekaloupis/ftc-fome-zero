@@ -374,12 +374,9 @@ def Avg_Cost_Two_Country(df1):
     
     #Função criada para retornar a media do preco de um prato para dois nos diferentes paises
     
-    df_aux = df1.groupby(by =['country_code']).mean().sort_values(by = ['average_cost_for_two'],
-                         ascending = False).reset_index()[['country_code','average_cost_for_two']]
-
-    df_aux['average_cost_for_two'] = list(map(lambda x: round(x,1), df_aux['average_cost_for_two']))
+    df_aux = pd.DataFrame(df1.groupby(by = ['country_code']).apply(lambda x: round(np.mean(x['average_cost_for_two'],0))).reset_index())
     
-    df_aux = df_aux.rename(columns = {'average_cost_for_two':'media de prato para dois'})
+    df_aux = df_aux.rename(columns = {0: 'media de prato para dois'})   
     
     fig = px.bar(df_aux, x = 'country_code', y = 'media de prato para dois', 
                  title = 'País x Média de Preço de um Prato para Dois',
