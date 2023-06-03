@@ -6,7 +6,7 @@ This repository contains files and scripts to build a company strategy dashboard
 A empresa Fome Zero é uma marketplace de restaurantes. Ou seja, seu core business é facilitar o encontro e negociações de clientes e restaurantes. Os restaurantes fazem o cadastro dentro da plataforma da Fome Zero, que disponibiliza informações como endereço, tipo de culinária servida, se possui reservas, se faz entregas e, também, uma nota de avaliação dos serviços e produtos do restaurante, dentre outras informações.
 O CEO Guerra também foi recém-contratado e precisa entender melhor o negócio para conseguir tomar as melhores decisões estratégicas e alavancar ainda mais a Fome Zero e, para isso, ele precisa que seja feita uma análise nos dados da empresa e que sejam gerados dashboards, a partir dessas análises, para responder às seguintes perguntas:
 
-Geral
+## Geral
 
 1. Quantos restaurantes únicos estão registrados?
 2. Quantos países únicos estão registrados?
@@ -14,7 +14,7 @@ Geral
 4. Qual o total de avaliações feitas?
 5. Qual o total de tipos de culinária registrados?
 
-País
+## País
 
 1. Qual o nome do país que possui mais cidades registradas?
 2. Qual o nome do país que possui mais restaurantes registrados?
@@ -28,7 +28,7 @@ País
 10. Qual o nome do país que possui, na média, a menor nota média registrada?
 11. Qual a média de preço de um prato para dois por país?
 
-Cidade
+## Cidade
 
 1. Qual o nome da cidade que possui mais restaurantes registrados?
 2. Qual o nome da cidade que possui mais restaurantes com nota média acima de 4?
@@ -39,7 +39,7 @@ Cidade
 7. Qual o nome da cidade que possui a maior quantidade de restaurantes que fazem entregas?
 8. Qual o nome da cidade que possui a maior quantidade de restaurantes que aceitam pedidos online?
 
-Restaurantes
+## Restaurantes
 
 1. Qual o nome do restaurante que possui a maior quantidade de avaliações?
 2. Qual o nome do restaurante com a maior nota média?
@@ -53,7 +53,7 @@ média de avaliação?
 possuem um valor médio de prato para duas pessoas maior que as churrascarias
 americanas (BBQ)?
 
-Tipos de Culinária
+## Tipos de Culinária
 
 1. Dos restaurantes que possuem o tipo de culinária italiana, qual o nome do restaurante com a maior média de avaliação?
 2. Dos restaurantes que possuem o tipo de culinária italiana, qual o nome do restaurante com a menor média de avaliação?
@@ -87,14 +87,15 @@ A manipulação das análises e métricas presentes no painel possibilitam uma r
 
 O painel estratégico foi desenvolvido utilizando as métricas que refletem as 4 principais visões do modelo de negócio da empresa: 
 
-Visão Geral
-Visão Países
-Visão Cidades
-Visão Restaurantes/Culinárias
-Cada visão é representada pelo seguinte conjunto de métricas:
+## Visão Geral
+## Visão Países
+## Visão Cidades
+## Visão Restaurantes/Culinárias
+
+### Cada visão é representada pelo seguinte conjunto de métricas:
 
 
-Visão Geral
+## Visão Geral
 
 a)	Quantidade de restaurantes únicos cadastrados;
 
@@ -106,7 +107,7 @@ d)	Quantidade de tipo de culinárias oferecidas;
 
 e)	Quantidade de avaliações feitas na plataforma;
 
-Visão Países
+## Visão Países
 
 a)	Quantidade de cidades por país;
 
@@ -128,7 +129,7 @@ i)	Média das avaliações por país;
 
 j)	Média de preço de um prato para dois por país
 
-Visão Cidades
+## Visão Cidades
 
 a)	Quantidade de restaurantes por cidade;
 
@@ -146,7 +147,7 @@ g)	Quantidade de restaurantes que fazem entregas por cidade;
 
 h)	Quantidade de restaurantes que atendem pedidos online por cidade
 
-Visão Restaurantes/Culinárias
+## Visão Restaurantes/Culinárias
 
 a)	Restaurantes com maior quantidade de avaliações feitas;
 
