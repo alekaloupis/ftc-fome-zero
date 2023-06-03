@@ -229,6 +229,9 @@ def City_Most_Expensive_Avg_Cost_Two(df1):
 
 
 def City_Different_Cuisines(df1):  
+    
+    #Função para retornar as cidades e os diferentes tipos de culinárias presentes em cada cidade
+    
     df_aux = df1.groupby(by = ['country_code','city', 'cuisines']).count().reset_index()[
          ['country_code','city', 'cuisines',  'restaurant_id']]
    
