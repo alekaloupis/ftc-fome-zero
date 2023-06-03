@@ -6,6 +6,7 @@ import streamlit as st
 import folium
 from streamlit_folium import folium_static
 import inflection
+import numpy as np
 
 st.set_page_config(page_title = 'Fome Zero', page_icon = '🥩', layout = 'wide')
 
@@ -160,10 +161,9 @@ def Restaurant_Most_Average_Cost(df1):
 
 def Cuisines_Agg_Rating(df1):
     
-    df_aux = df1.groupby(by = ['cuisines']).mean().sort_values(by = ['aggregate_rating'], ascending = False).reset_index()[
-        ['cuisines','aggregate_rating']]
+    df_aux = pd.DataFrame(df1.groupby(by = ['cuisines']).apply(lambda x: round(np.mean(x['aggregate_rating'],0))).reset_index())
     
-    df_aux['aggregate_rating'] = list(map(lambda x: round(x,1), df_aux['aggregate_rating']))
+    df_aux = df_aux.rename(columns = {0: 'média das avaliações'})
   
     return df_aux
 
