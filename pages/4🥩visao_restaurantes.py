@@ -170,11 +170,10 @@ def Cuisines_Agg_Rating(df1):
 
 def Cuisines_Mean_Avg_Cost_for_Two(df1):
     
-    df_aux = df1.groupby(by = ['cuisines']).mean().sort_values(by = ['average_cost_for_two'], ascending = False).reset_index()[
-        ['cuisines','average_cost_for_two']]
+    df_aux = pd.DataFrame(df1.groupby(by = ['cuisines']).apply(lambda x: round(np.mean(x['average_cost_for_two'],0))).reset_index())
     
-    df_aux['average_cost_for_two'] = list(map(lambda x: round(x,1), df_aux['average_cost_for_two']))
-  
+    df_aux = df_aux.rename(columns = {0: 'média do valor de um prato para 2'})
+      
     return df_aux
 
 
