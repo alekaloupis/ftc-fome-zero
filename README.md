@@ -168,7 +168,7 @@ h)	Tipos de culinária e valor médio de um prato para duas pessoas;
 # 4.	O produto final do projeto
 
 Painel online, hospedado em um Cloud e disponível para acesso em qualquer dispositivo conectado à internet.
-O painel pode ser acesso através desse link: https://alekaloupis-ftc-fome-zero-home-4luhgr.streamlit.app/visao_restaurantes
+O painel pode ser acesso através desse link: https://alekaloupis-ftc-fome-zero-home-4luhgr.streamlit.app/
 
 # 5.	Conclusão
 
