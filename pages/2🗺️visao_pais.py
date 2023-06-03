@@ -236,8 +236,7 @@ def Country_Mean_Votes(df1):
     
     df_aux = df_aux.rename(columns = {'votes': 'média das quantidades de avaliações'})
    
-#Plotamos o resultado em um gráfico    
-    
+   
     fig = px.bar(df_aux, x = 'country_code', y = 'média das quantidades de avaliações',title = 'País x Média das Quantidades de Avaliações',
                  text = 'média das quantidades de avaliações', hover_data =['média das quantidades de avaliações'], color = 'média das quantidades de avaliações')
     
