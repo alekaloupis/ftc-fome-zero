@@ -1,10 +1,8 @@
 streamlit == 1.15.1
 pandas == 1.4.3 
-numpy == 1.23.1
 folium == 0.13.0
-matplotlib == 3.5.3
-matplotlib.inline == 0.1.6
 streamlit-folium == 0.7.0
 inflection == 0.5.1
-plotly.express == 5.14.1
+plotly.express == 0.4.1
 folium.plugins == 0.14.0
+plotly.graph_objects == 5.14.1
