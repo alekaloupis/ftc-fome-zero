@@ -229,8 +229,9 @@ def Country_Mean_Votes(df1):
 
 #Agrupamos por pais e depois fizemos a media das avaliações atribuidas aos restaurantes
 
-    df_aux = df1.groupby(by = ['country_code']).mean().sort_values(by = ['votes'], 
-    ascending = False).reset_index() 
+    df_aux = df1.groupby(by = ['country_code']).mean().reset_index()[['country_code', 'votes']]
+    
+    df_aux = df_aux.sort_values(by = ['votes'], ascending = False)
     
     df_aux['votes'] = list(map(lambda x: round(x,0), df_aux['votes']))
 
