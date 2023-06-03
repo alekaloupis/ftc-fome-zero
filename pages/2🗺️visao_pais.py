@@ -348,13 +348,10 @@ def Mean_Rating_per_Country(df1):
     
     #Função para calcular as notas medias atribuidas aos restaurantes dos diferentes paises
 
+    df_aux = pd.DataFrame(df1.groupby(by = ['country_code']).apply(lambda x: round(np.mean(x['aggregate_rating'],0))).reset_index())
     
-    df_aux = df1.groupby(by =['country_code']).mean().sort_values(by = ['aggregate_rating'],
-    ascending = False).reset_index()[['country_code','aggregate_rating']]
-    
-    df_aux['aggregate_rating'] = list(map(lambda x: round(x,2), df_aux['aggregate_rating']))
-    
-    df_aux = df_aux.rename(columns = {'aggregate_rating':'média das avaliações'})
+      
+    df_aux = df_aux.rename(columns = {0:'média das avaliações'})
     
     
     fig = px.bar(df_aux, x = 'country_code', y = 'média das avaliações', 
