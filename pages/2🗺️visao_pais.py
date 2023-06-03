@@ -229,15 +229,11 @@ def Country_Mean_Votes(df1):
 
 #Agrupamos por pais e depois fizemos a media das avaliações atribuidas aos restaurantes
 
-    df_aux = df1.groupby(by = ['country_code']).mean().reset_index()[['country_code', 'votes']]
-    
-    df_aux = df_aux.sort_values(by = ['votes'], ascending = False)
-    
-    df_aux['votes'] = list(map(lambda x: round(x,0), df_aux['votes']))
+    df_aux = pd.DataFrame(df1.groupby(by = ['country_code']).apply(lambda x: round(np.mean(x['votes'],0))).reset_index())   
 
 #Arredondamos para nenhuma casa decimal os resultaados    
    
-    df_aux = df_aux.rename(columns = {'votes': 'média das quantidades de avaliações'})
+    df_aux = df_aux.rename(columns = {'0': 'média das quantidades de avaliações'})
       
     fig = px.bar(df_aux, x = 'country_code', y = 'média das quantidades de avaliações',title = 'País x Média das Quantidades de Avaliações',
                  text = 'média das quantidades de avaliações', hover_data =['média das quantidades de avaliações'], color = 'média das quantidades de avaliações')
