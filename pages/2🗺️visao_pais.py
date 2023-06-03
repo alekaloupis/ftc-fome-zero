@@ -6,6 +6,7 @@ import streamlit as st
 import folium
 from streamlit_folium import folium_static
 import inflection
+import numpy as np
 
 st.set_page_config(page_title = 'Fome Zero', page_icon = '🗺️', layout = 'wide')
 
