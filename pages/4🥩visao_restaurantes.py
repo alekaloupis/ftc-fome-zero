@@ -161,6 +161,8 @@ def Restaurant_Most_Average_Cost(df1):
 
 def Cuisines_Agg_Rating(df1):
     
+    #Função que retorna os tipos de culinária e as médias de avaliações
+    
     df_aux = pd.DataFrame(df1.groupby(by = ['cuisines']).apply(lambda x: round(np.mean(x['aggregate_rating']),1)).reset_index())
     
     df_aux = df_aux.rename(columns = {0: 'média das avaliações'})
@@ -169,6 +171,7 @@ def Cuisines_Agg_Rating(df1):
 
 
 def Cuisines_Mean_Avg_Cost_for_Two(df1):
+    #Função que retorna os tipos de culinárias e as médias do valor de um prato para 2
     
     df_aux = pd.DataFrame(df1.groupby(by = ['cuisines']).apply(lambda x: round(np.mean(x['average_cost_for_two']),1)).reset_index())
     
